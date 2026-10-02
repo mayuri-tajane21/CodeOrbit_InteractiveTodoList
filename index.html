@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taskly | To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="todo-card">
+
+            <div class="top-section">
+                <div>
+                    <p class="eyebrow">MY WORKSPACE</p>
+                    <h1>My Tasks</h1>
+                    <p class="subtitle">
+                        Organize your day, one task at a time.
+                    </p>
+                </div>
+
+                <div class="task-count">
+                    <span id="taskCount">0</span>
+                    <small>Tasks</small>
+                </div>
+            </div>
+
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                >
+
+                <button id="addTaskBtn">
+                    Add Task
+                </button>
+            </div>
+
+
+            <div class="task-toolbar">
+
+                <div class="filter-buttons">
+                    <button class="filter active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter" data-filter="active">
+                        Active
+                    </button>
+
+                    <button class="filter" data-filter="completed">
+                        Completed
+                    </button>
+                </div>
+
+                <button id="clearCompleted">
+                    Clear completed
+                </button>
+
+            </div>
+
+
+            <ul id="taskList"></ul>
+
+
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">✓</div>
+
+                <h2>No tasks yet</h2>
+
+                <p>
+                    Add your first task and start getting things done.
+                </p>
+            </div>
+
+
+            <div class="footer-info">
+                <span id="remainingText">0 tasks remaining</span>
+
+                <span>
+                    Tasks are saved automatically
+                </span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
